@@ -44,7 +44,7 @@ const App = () => {
       <View style={{flex: 1}}>
         <NavigationContainer>
           <Stack.Navigator
-            initialRouteName="Welcomesss"
+            initialRouteName="Welcome"
             screenOptions={{
               transitionSpec: {
                 open: {animation: 'timing', config: {duration: 5}},
