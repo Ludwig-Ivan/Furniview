@@ -11,10 +11,18 @@ const Menu = props => {
 
   return (
     <View style={{flex: 1}}>
-      <Header navigation={navigation} />
+      <Header
+        navigation_op={() => navigation.navigate('Home')}
+        navigation={navigation}
+      />
       <ScrollView>
         <View style={style.category}>
-          <Card style={style.card}>
+          <Card
+            onPress={() => {
+              console.log('Hola');
+              navigation.navigate('MenuProd');
+            }}
+            style={style.card}>
             <Card.Cover
               style={style.card_cover}
               source={require('../img/mueble1.jpg')}
@@ -83,6 +91,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     flexWrap: 'wrap',
+    paddingBottom: 15,
   },
 
   card: {

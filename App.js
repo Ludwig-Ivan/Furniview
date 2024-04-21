@@ -11,6 +11,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Menu from './src/components/Menu';
 import Welcome from './src/components/Welcome';
+import MenuProd from './src/components/MenuProd';
 
 const Stack = createStackNavigator();
 
@@ -36,6 +37,10 @@ function Menu_Screen({route, navigation}) {
 
 function Welcome_Screen({navigation}) {
   return <Welcome navigation={navigation} />;
+}
+
+function Menu_Prod_Screen({navigation}) {
+  return <MenuProd navigation={navigation} />;
 }
 
 const App = () => {
@@ -81,6 +86,12 @@ const App = () => {
               options={{title: 'Welcome', headerShown: false}}
               name="Welcome"
               component={Welcome_Screen}
+            />
+
+            <Stack.Screen
+              options={{title: 'MenuProd', headerShown: false}}
+              name="MenuProd"
+              component={Menu_Prod_Screen}
             />
           </Stack.Navigator>
         </NavigationContainer>

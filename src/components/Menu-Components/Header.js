@@ -1,25 +1,33 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {IconButton} from 'react-native-paper';
+import Buscar from './Buscar';
+import Filter from './Filter';
 
-const Header = ({navigation}) => {
+const Header = ({navigation_op, navigation}) => {
+  const [bus, setBus] = useState(false);
+  const [filt, setFilt] = useState(false);
   return (
     <View style={style.head}>
+      <Buscar bus={bus} setBus={setBus} />
+      <Filter filt={filt} setFilt={setFilt} />
       <IconButton
         size={40}
-        onPress={() => {
-          navigation.goBack();
-        }}
+        onPress={navigation_op}
         icon={require('./Menu-Img/back.png')}
       />
       <IconButton
         size={40}
-        onPress={() => {}}
+        onPress={() => {
+          setBus(true);
+        }}
         icon={require('./Menu-Img/search.png')}
       />
       <IconButton
         size={40}
-        onPress={() => {}}
+        onPress={() => {
+          setFilt(true);
+        }}
         icon={require('./Menu-Img/filter.png')}
       />
       <IconButton
