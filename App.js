@@ -12,6 +12,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Menu from './src/components/Menu';
 import Welcome from './src/components/Welcome';
 import MenuProd from './src/components/MenuProd';
+import Producto from './src/components/Menu-Components/Producto';
 
 const Stack = createStackNavigator();
 
@@ -41,6 +42,10 @@ function Welcome_Screen({navigation}) {
 
 function Menu_Prod_Screen({navigation}) {
   return <MenuProd navigation={navigation} />;
+}
+
+function Prod_Screen({navigation, route}) {
+  return <Producto navigation={navigation} img={route.params} />;
 }
 
 const App = () => {
@@ -92,6 +97,12 @@ const App = () => {
               options={{title: 'MenuProd', headerShown: false}}
               name="MenuProd"
               component={Menu_Prod_Screen}
+            />
+
+            <Stack.Screen
+              options={{title: 'Producto', headerShown: false}}
+              name="Producto"
+              component={Prod_Screen}
             />
           </Stack.Navigator>
         </NavigationContainer>

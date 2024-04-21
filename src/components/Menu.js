@@ -19,7 +19,6 @@ const Menu = props => {
         <View style={style.category}>
           <Card
             onPress={() => {
-              console.log('Hola');
               navigation.navigate('MenuProd');
             }}
             style={style.card}>

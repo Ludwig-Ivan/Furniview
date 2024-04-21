@@ -1,10 +1,11 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
-import {View, StyleSheet, ScrollView} from 'react-native';
+import React, {useState} from 'react';
+import {View, StyleSheet, ScrollView, Image, Pressable} from 'react-native';
 import Header from './Menu-Components/Header';
 import {Card, Text, Title} from 'react-native-paper';
+import Image_Prod from './Menu-Components/ImageProd';
 
-const contenido = can => {
+const contenido = (can, navigation, setVM, setImg) => {
   let dir = [
     require('../img/mueble1.jpg'),
     require('../img/mueble2.jpg'),
@@ -20,9 +21,19 @@ const contenido = can => {
   let cards = [];
   for (let i = 0; i < can; i++) {
     cards.push(
-      <Card key={i} style={style.card} contentStyle={style.card_content}>
+      <Card
+        key={i}
+        style={style.card}
+        contentStyle={style.card_content}
+        onPress={() => navigation.navigate('Producto', dir[i])}>
         <View style={style.card_content}>
-          <Card.Cover style={style.card_cover} source={dir[i]} />
+          <Pressable
+            onPress={() => {
+              setImg(dir[i]);
+              setVM(true);
+            }}>
+            <Image style={style.card_cover} source={dir[i]} />
+          </Pressable>
           <View style={{justifyContent: 'space-around'}}>
             <Title style={style.card_title}>Comedores</Title>
             <Text style={style.card_title}>$100000</Text>
@@ -37,15 +48,22 @@ const contenido = can => {
 };
 
 const MenuProd = ({navigation}) => {
+  const [vm, setVM] = useState(false);
+  const [img, setImg] = useState('');
   return (
     <View style={{flex: 1}}>
       <Header
         navigation_op={() => navigation.goBack()}
         navigation={navigation}
       />
+
       <ScrollView>
-        <View style={style.category}>{contenido(6)}</View>
+        <View style={style.category}>
+          {contenido(6, navigation, setVM, setImg)}
+        </View>
       </ScrollView>
+
+      <Image_Prod vm={vm} setVM={setVM} img={img} />
     </View>
   );
 };
