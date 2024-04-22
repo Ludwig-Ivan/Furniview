@@ -15,50 +15,113 @@ const Filter = ({filt, setFilt}) => {
         <View style={style.content}>
           <ScrollView>
             <List.Section>
-              <List.Accordion title="Acordion 1" id="1">
-                <List.Item title="Item 1" />
-                <List.Item title="Item 1" />
-                <List.Item title="Item 1" />
-                <List.Item title="Item 1" />
-                <List.Item title="Item 1" />
-              </List.Accordion>
+              <View style={style.list}>
+                <List.Accordion
+                  style={style.acord}
+                  titleStyle={{color: '#FFF'}}
+                  title="Acordion 1"
+                  id="1">
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item style={style.items} title="Item 1" />
+                </List.Accordion>
+              </View>
             </List.Section>
 
             <List.Section>
-              <List.Accordion title="Acordion 2" id="2">
-                <List.Item title="Item 2" />
-                <List.Item title="Item 2" />
-                <List.Item title="Item 2" />
-                <List.Item title="Item 2" />
-                <List.Item title="Item 2" />
-              </List.Accordion>
+              <View style={style.list}>
+                <List.Accordion
+                  style={style.acord}
+                  titleStyle={{color: '#FFF'}}
+                  title="Acordion 2"
+                  id="2">
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item style={style.items} title="Item 1" />
+                </List.Accordion>
+              </View>
             </List.Section>
             <List.Section>
-              <List.Accordion title="Acordion 3" id="3">
-                <List.Item title="Item 3" />
-                <List.Item title="Item 3" />
-                <List.Item title="Item 3" />
-                <List.Item title="Item 3" />
-                <List.Item title="Item 3" />
-              </List.Accordion>
+              <View style={style.list}>
+                <List.Accordion
+                  style={style.acord}
+                  titleStyle={{color: '#FFF'}}
+                  title="Acordion 3"
+                  id="3">
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item style={style.items} title="Item 1" />
+                </List.Accordion>
+              </View>
             </List.Section>
             <List.Section>
-              <List.Accordion title="Acordion 4" id="4">
-                <List.Item title="Item 4" />
-                <List.Item title="Item 4" />
-                <List.Item title="Item 4" />
-                <List.Item title="Item 4" />
-                <List.Item title="Item 4" />
-              </List.Accordion>
-            </List.Section>
-            <List.Section>
-              <List.Accordion title="Acordion 5" id="5">
-                <List.Item title="Item 5" />
-                <List.Item title="Item 5" />
-                <List.Item title="Item 5" />
-                <List.Item title="Item 5" />
-                <List.Item title="Item 5" />
-              </List.Accordion>
+              <View style={style.list}>
+                <List.Accordion
+                  style={style.acord}
+                  titleStyle={{color: '#FFF'}}
+                  title="Acordion 4"
+                  id="4">
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item
+                    style={[style.items, {borderBottomWidth: 1}]}
+                    title="Item 1"
+                  />
+                  <List.Item style={style.items} title="Item 1" />
+                </List.Accordion>
+              </View>
             </List.Section>
             <Button>
               <Text>Filtrar</Text>
@@ -74,6 +137,19 @@ const style = StyleSheet.create({
     height: 350,
     backgroundColor: '#D4B89E',
     padding: 10,
+  },
+
+  list: {
+    borderRadius: 10,
+    overflow: 'hidden',
+  },
+
+  items: {
+    backgroundColor: 'rgba(0,0,0,0.35)',
+  },
+
+  acord: {
+    backgroundColor: 'rgba(0,0,0,0.35)',
   },
 });
 export default Filter;

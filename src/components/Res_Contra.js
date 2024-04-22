@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
-import {TextInput} from 'react-native-paper';
+import {Surface, TextInput} from 'react-native-paper';
 import {Button} from 'react-native-paper';
 import Background from './Background';
 
@@ -70,14 +70,21 @@ const Res_Contra = ({navigation}) => {
               activeUnderlineColor="#0000"
             />
           </View>
-          <Button
-            onPress={() => {
-              navigation.goBack();
+          <Surface
+            style={{
+              width: 226,
+              borderRadius: 20,
             }}
-            buttonColor="#382424"
-            style={style.btn}>
-            <Text style={style.btn_text}>Registrarse</Text>
-          </Button>
+            elevation={2}>
+            <Button
+              onPress={() => {
+                navigation.goBack();
+              }}
+              buttonColor="#382424"
+              style={style.btn}>
+              <Text style={style.btn_text}>Restablecer</Text>
+            </Button>
+          </Surface>
         </View>
       </View>
     </Background>

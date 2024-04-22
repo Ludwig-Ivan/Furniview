@@ -1,19 +1,21 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {Alert, StyleSheet, Text, View} from 'react-native';
-import {TextInput} from 'react-native-paper';
+import {StyleSheet, Text, View} from 'react-native';
+import {Surface, TextInput} from 'react-native-paper';
 import {Button} from 'react-native-paper';
 import Background from './Background';
+import Ventana_Alert from './Login-Components/Ventana_Alert';
 
 const Login = ({navigation}) => {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
+  const [vm, setVM] = useState(false);
 
   function Ingresar() {
-    if (user.trim() !== '' || password.trim() !== '') {
+    if (user.trim() !== '' && password.trim() !== '') {
       navigation.navigate('Menu', {user: user, password: password});
     } else {
-      Alert.alert('Campos Vacios', 'Llene los campos para poder ingresar');
+      setVM(true);
       return;
     }
   }
@@ -25,6 +27,12 @@ const Login = ({navigation}) => {
           flex: 1,
           position: 'absolute',
         }}>
+        <Ventana_Alert
+          vm={vm}
+          setVM={setVM}
+          title={'Campos Vacios'}
+          parag={'Por favor llene los campos para ingresar'}
+        />
         <Button
           buttonColor="#D4B89E"
           contentStyle={{justifyContent: 'flex-start'}}
@@ -35,7 +43,7 @@ const Login = ({navigation}) => {
           }}>
           <Text style={style.btn_reg}>INICIO</Text>
         </Button>
-        <View style={style.login}>
+        <Surface elevation={4} style={style.login}>
           <View>
             <Text style={style.title}>INGRESAR</Text>
             <Text style={style.subtitle}>Ingresa para continuar</Text>
@@ -77,7 +85,7 @@ const Login = ({navigation}) => {
           <Button onPress={Ingresar} buttonColor="#382424" style={style.btn}>
             <Text style={style.btn_text}>Ingresar</Text>
           </Button>
-        </View>
+        </Surface>
       </View>
     </Background>
   );
@@ -88,7 +96,7 @@ const style = StyleSheet.create({
     backgroundColor: '#D4B89E',
     width: 265,
     height: 405,
-    borderRadius: 10,
+    borderTopRightRadius: 10,
     padding: 18.5,
     justifyContent: 'space-between',
     top: '34%',

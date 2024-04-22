@@ -82,6 +82,7 @@ const style = StyleSheet.create({
   card_cover: {
     width: 150,
     height: 130,
+    borderRadius: 10,
   },
   card_title: {
     fontWeight: '700',
