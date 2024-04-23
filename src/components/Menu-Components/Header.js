@@ -32,7 +32,9 @@ const Header = ({navigation_op, navigation}) => {
       />
       <IconButton
         size={40}
-        onPress={() => {}}
+        onPress={() => {
+          navigation.navigate('Perfil');
+        }}
         icon={require('./Menu-Img/user.png')}
       />
     </View>

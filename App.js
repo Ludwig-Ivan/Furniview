@@ -13,6 +13,7 @@ import Menu from './src/components/Menu';
 import Welcome from './src/components/Welcome';
 import MenuProd from './src/components/MenuProd';
 import Producto from './src/components/Menu-Components/Producto';
+import Perfil from './src/components/Header-Components/Perfil';
 
 const Stack = createStackNavigator();
 
@@ -46,6 +47,10 @@ function Menu_Prod_Screen({navigation}) {
 
 function Prod_Screen({navigation, route}) {
   return <Producto navigation={navigation} img={route.params} />;
+}
+
+function Perfil_Screen({navigation}) {
+  return <Perfil navigation={navigation} />;
 }
 
 const App = () => {
@@ -103,6 +108,12 @@ const App = () => {
               options={{title: 'Producto', headerShown: false}}
               name="Producto"
               component={Prod_Screen}
+            />
+
+            <Stack.Screen
+              options={{title: 'Perfil', headerShown: false}}
+              name="Perfil"
+              component={Perfil_Screen}
             />
           </Stack.Navigator>
         </NavigationContainer>
