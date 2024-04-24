@@ -4,19 +4,19 @@ import {View, StyleSheet, ScrollView, Image, Pressable} from 'react-native';
 import Header from './Menu-Components/Header';
 import {Card, Text, Title} from 'react-native-paper';
 import Image_Prod from './Menu-Components/ImageProd';
+import {Images} from '../constants';
 
 const contenido = (can, navigation, setVM, setImg) => {
   let dir = [
-    require('../img/mueble1.jpg'),
-    require('../img/mueble2.jpg'),
-    require('../img/mueble3.jpg'),
-    require('../img/mueble4.jpg'),
-    require('../img/mueble5.jpg'),
-    require('../img/mueble6.jpg'),
-    require('../img/mueble7.jpg'),
-    require('../img/mueble8.jpg'),
-    require('../img/mueble9.jpg'),
-    require('../img/mueble1.jpg'),
+    Images.mueble1,
+    Images.mueble2,
+    Images.mueble3,
+    Images.mueble4,
+    Images.mueble5,
+    Images.mueble6,
+    Images.mueble7,
+    Images.mueble8,
+    Images.mueble9,
   ];
   let cards = [];
   for (let i = 0; i < can; i++) {
@@ -49,7 +49,7 @@ const contenido = (can, navigation, setVM, setImg) => {
 
 const MenuProd = ({navigation}) => {
   const [vm, setVM] = useState(false);
-  const [img, setImg] = useState('');
+  const [img, setImg] = useState(0);
   return (
     <View style={{flex: 1}}>
       <Header

@@ -3,6 +3,7 @@ import React from 'react';
 import {View, StyleSheet, ScrollView} from 'react-native';
 import Header from './Menu-Components/Header';
 import {Card} from 'react-native-paper';
+import {Images} from '../constants';
 
 const Menu = props => {
   const {navigation, cli} = props;
@@ -22,59 +23,35 @@ const Menu = props => {
               navigation.navigate('MenuProd');
             }}
             style={style.card}>
-            <Card.Cover
-              style={style.card_cover}
-              source={require('../img/mueble1.jpg')}
-            />
+            <Card.Cover style={style.card_cover} source={Images.mueble1} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover
-              style={style.card_cover}
-              source={require('../img/mueble2.jpg')}
-            />
+            <Card.Cover style={style.card_cover} source={Images.mueble2} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover
-              style={style.card_cover}
-              source={require('../img/mueble3.jpg')}
-            />
+            <Card.Cover style={style.card_cover} source={Images.mueble3} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover
-              style={style.card_cover}
-              source={require('../img/mueble4.jpg')}
-            />
+            <Card.Cover style={style.card_cover} source={Images.mueble4} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover
-              style={style.card_cover}
-              source={require('../img/mueble5.jpg')}
-            />
+            <Card.Cover style={style.card_cover} source={Images.mueble5} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover
-              style={style.card_cover}
-              source={require('../img/mueble6.jpg')}
-            />
+            <Card.Cover style={style.card_cover} source={Images.mueble6} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover
-              style={style.card_cover}
-              source={require('../img/mueble7.jpg')}
-            />
+            <Card.Cover style={style.card_cover} source={Images.mueble7} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover
-              style={style.card_cover}
-              source={require('../img/mueble8.jpg')}
-            />
+            <Card.Cover style={style.card_cover} source={Images.mueble9} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
         </View>
