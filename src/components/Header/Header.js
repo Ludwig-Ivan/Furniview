@@ -3,6 +3,7 @@ import {StyleSheet, View} from 'react-native';
 import {IconButton} from 'react-native-paper';
 import Buscar from './Buscar';
 import Filter from './Filter';
+import {Icons} from '../../constants';
 
 const Header = ({navigation_op, navigation}) => {
   const [bus, setBus] = useState(false);
@@ -11,31 +12,27 @@ const Header = ({navigation_op, navigation}) => {
     <View style={style.head}>
       <Buscar bus={bus} setBus={setBus} />
       <Filter filt={filt} setFilt={setFilt} />
-      <IconButton
-        size={40}
-        onPress={navigation_op}
-        icon={require('./Menu-Img/back.png')}
-      />
+      <IconButton size={40} onPress={navigation_op} icon={Icons.back} />
       <IconButton
         size={40}
         onPress={() => {
           setBus(true);
         }}
-        icon={require('./Menu-Img/search.png')}
+        icon={Icons.search}
       />
       <IconButton
         size={40}
         onPress={() => {
           setFilt(true);
         }}
-        icon={require('./Menu-Img/filter.png')}
+        icon={Icons.filter}
       />
       <IconButton
         size={40}
         onPress={() => {
           navigation.navigate('Perfil');
         }}
-        icon={require('./Menu-Img/user.png')}
+        icon={Icons.user}
       />
     </View>
   );

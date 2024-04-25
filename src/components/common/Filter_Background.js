@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
 
-const Filter = () => {
+const Filter_Background = () => {
   return <View style={style.colorOverlay} />;
 };
 
@@ -12,4 +12,4 @@ const style = StyleSheet.create({
   },
 });
 
-export default Filter;
+export default Filter_Background;

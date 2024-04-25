@@ -3,8 +3,8 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import {Surface, TextInput} from 'react-native-paper';
 import {Button} from 'react-native-paper';
-import Background from './Background';
-import Ventana_Alert from './Login-Components/Ventana_Alert';
+import Background from '../common/Background';
+import Ventana_Alert from '../common/Ventana_Alert';
 
 const Registrarse = ({navigation}) => {
   const [user, setUser] = useState('');

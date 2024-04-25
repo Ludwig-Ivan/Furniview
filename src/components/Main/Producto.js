@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {View, Text, Image, StyleSheet, Pressable} from 'react-native';
-import Header from './Header';
+import Header from '../Header/Header';
 import {Button, DataTable} from 'react-native-paper';
 import Image_Prod from './ImageProd';
 

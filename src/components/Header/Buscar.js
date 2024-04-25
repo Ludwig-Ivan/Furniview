@@ -2,6 +2,7 @@
 import React, {useState} from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Modal, Portal, Searchbar} from 'react-native-paper';
+import {Icons} from '../../constants';
 
 const Buscar = ({bus, setBus}) => {
   const [search, setSearch] = useState('');
@@ -24,8 +25,8 @@ const Buscar = ({bus, setBus}) => {
             textAlign="center"
             value={search}
             style={style.serachbar}
-            icon={require('./Menu-Img/search.png')}
-            clearIcon={require('./Menu-Img/delete.png')}
+            icon={Icons.search}
+            clearIcon={Icons.del}
             cursorColor={'#FFF'}
             selectionColor={'rgba(0,0,0,0.3)'}
           />

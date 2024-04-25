@@ -2,18 +2,18 @@
 import React from 'react';
 import {View} from 'react-native';
 import 'react-native-gesture-handler';
-import Main from './src/components/Main';
-import Login from './src/components/Login';
-import Registrarse from './src/components/Registrarse';
+import Main from './src/components/Introduccion/Main';
+import Login from './src/components/Introduccion/Login';
+import Registrarse from './src/components/Introduccion/Registrarse';
 import {PaperProvider} from 'react-native-paper';
-import Res_contra from './src/components/Res_Contra';
+import Res_contra from './src/components/Main/Res_Contra';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import Menu from './src/components/Menu';
-import Welcome from './src/components/Welcome';
-import MenuProd from './src/components/MenuProd';
-import Producto from './src/components/Menu-Components/Producto';
-import Perfil from './src/components/Header-Components/Perfil';
+import Menu from './src/components/Main/Menu';
+import Welcome from './src/components/Introduccion/Welcome';
+import MenuProd from './src/components/Main/MenuProd';
+import Producto from './src/components/Main/Producto';
+import Perfil from './src/components/Header/Perfil';
 
 const Stack = createStackNavigator();
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image, Pressable} from 'react-native';
+import {Icons} from '../../constants';
 
 const Item = () => {
   return (
@@ -16,7 +17,7 @@ const Item = () => {
         onPress={() => {
           console.log('delete');
         }}>
-        <Image style={style.img} source={require('./img/delete.png')} />
+        <Image style={style.img} source={Icons.del} />
       </Pressable>
     </View>
   );

@@ -1,7 +1,8 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect} from 'react';
 import {Text, View, StyleSheet, Image} from 'react-native';
-import Background from './Background';
+import Background from '../common/Background';
+import {Logos} from '../../constants';
 
 const Welcome = ({navigation}) => {
   useEffect(() => {
@@ -16,10 +17,7 @@ const Welcome = ({navigation}) => {
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <View style={style.main}>
           <View style={{gap: 80, alignItems: 'center'}}>
-            <Image
-              style={style.logo}
-              source={require('../img/LogoMuebleria.jpeg')}
-            />
+            <Image style={style.logo} source={Logos.logo1} />
             <Text style={style.titulo}>BIENVENIDO</Text>
           </View>
         </View>

@@ -1,26 +1,27 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {Image, StyleSheet, View} from 'react-native';
+import {Furnitures} from '../../constants';
 
 const Background = () => {
   return (
     <View style={style.view}>
       <View style={style.viewimg}>
         <View style={[style.rightview, {marginRight: -180}]}>
-          <Image style={style.img} source={require('../img/mueble1.jpg')} />
+          <Image style={style.img} source={Furnitures.mueble1} />
         </View>
         <View style={[style.rightview, {marginRight: -30}]}>
-          <Image style={style.img} source={require('../img/mueble2.jpg')} />
-          <Image style={style.img} source={require('../img/mueble3.jpg')} />
+          <Image style={style.img} source={Furnitures.mueble2} />
+          <Image style={style.img} source={Furnitures.mueble3} />
         </View>
         <View style={[style.rightview, {marginRight: 0}]}>
-          <Image style={style.img} source={require('../img/mueble4.jpg')} />
-          <Image style={style.img} source={require('../img/mueble5.jpg')} />
-          <Image style={style.img} source={require('../img/mueble6.jpg')} />
+          <Image style={style.img} source={Furnitures.mueble4} />
+          <Image style={style.img} source={Furnitures.mueble5} />
+          <Image style={style.img} source={Furnitures.mueble6} />
         </View>
         <View style={[style.rightview, {marginRight: 0}]}>
-          <Image style={style.img} source={require('../img/mueble7.jpg')} />
-          <Image style={style.img} source={require('../img/mueble8.jpg')} />
+          <Image style={style.img} source={Furnitures.mueble7} />
+          <Image style={style.img} source={Furnitures.mueble8} />
         </View>
       </View>
     </View>

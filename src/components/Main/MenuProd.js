@@ -1,22 +1,22 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
 import {View, StyleSheet, ScrollView, Image, Pressable} from 'react-native';
-import Header from './Menu-Components/Header';
+import Header from '../Header/Header';
 import {Card, Text, Title} from 'react-native-paper';
-import Image_Prod from './Menu-Components/ImageProd';
-import {Images} from '../constants';
+import Image_Prod from './ImageProd';
+import {Furnitures} from '../../constants';
 
 const contenido = (can, navigation, setVM, setImg) => {
   let dir = [
-    Images.mueble1,
-    Images.mueble2,
-    Images.mueble3,
-    Images.mueble4,
-    Images.mueble5,
-    Images.mueble6,
-    Images.mueble7,
-    Images.mueble8,
-    Images.mueble9,
+    Furnitures.mueble1,
+    Furnitures.mueble2,
+    Furnitures.mueble3,
+    Furnitures.mueble4,
+    Furnitures.mueble5,
+    Furnitures.mueble6,
+    Furnitures.mueble7,
+    Furnitures.mueble8,
+    Furnitures.mueble9,
   ];
   let cards = [];
   for (let i = 0; i < can; i++) {

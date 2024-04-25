@@ -1,3 +1,5 @@
-import Images from './Images';
+import Furnitures from './Furnitures';
+import Logos from './Logos';
+import Icons from './Icons';
 
-export {Images};
+export {Furnitures, Logos, Icons};

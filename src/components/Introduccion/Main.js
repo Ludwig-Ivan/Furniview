@@ -2,7 +2,8 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import {Button} from 'react-native-paper';
-import Background from './Background';
+import Background from '../common/Background';
+import {Logos} from '../../constants';
 
 const Main = ({navigation}) => {
   return (
@@ -10,10 +11,7 @@ const Main = ({navigation}) => {
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <View style={style.main}>
           <View style={{gap: 10}}>
-            <Image
-              style={style.logo}
-              source={require('../img/LogoMuebleria.jpeg')}
-            />
+            <Image style={style.logo} source={Logos.logo1} />
             <Text style={style.titulo}>FURNIVIEW</Text>
           </View>
           <View style={{gap: 20}}>

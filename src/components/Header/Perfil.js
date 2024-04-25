@@ -1,9 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
-import Background from '../Background';
+import Background from '../common/Background';
 import {Button} from 'react-native-paper';
-import Item from './Item';
+import Item from '../common/Item';
 
 const Perfil = ({navigation}) => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import Images_back from '../components/Images_back';
-import Filter from '../components/Filter';
+import Images_back from './Images_back';
+import Filter from './Filter_Background';
 
 const Background = ({children}) => {
   return (

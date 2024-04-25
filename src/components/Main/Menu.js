@@ -1,9 +1,9 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {View, StyleSheet, ScrollView} from 'react-native';
-import Header from './Menu-Components/Header';
+import Header from '../Header/Header';
 import {Card} from 'react-native-paper';
-import {Images} from '../constants';
+import {Furnitures} from '../../constants';
 
 const Menu = props => {
   const {navigation, cli} = props;
@@ -23,35 +23,35 @@ const Menu = props => {
               navigation.navigate('MenuProd');
             }}
             style={style.card}>
-            <Card.Cover style={style.card_cover} source={Images.mueble1} />
+            <Card.Cover style={style.card_cover} source={Furnitures.mueble1} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover style={style.card_cover} source={Images.mueble2} />
+            <Card.Cover style={style.card_cover} source={Furnitures.mueble2} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover style={style.card_cover} source={Images.mueble3} />
+            <Card.Cover style={style.card_cover} source={Furnitures.mueble3} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover style={style.card_cover} source={Images.mueble4} />
+            <Card.Cover style={style.card_cover} source={Furnitures.mueble4} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover style={style.card_cover} source={Images.mueble5} />
+            <Card.Cover style={style.card_cover} source={Furnitures.mueble5} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover style={style.card_cover} source={Images.mueble6} />
+            <Card.Cover style={style.card_cover} source={Furnitures.mueble6} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover style={style.card_cover} source={Images.mueble7} />
+            <Card.Cover style={style.card_cover} source={Furnitures.mueble7} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
           <Card style={style.card}>
-            <Card.Cover style={style.card_cover} source={Images.mueble9} />
+            <Card.Cover style={style.card_cover} source={Furnitures.mueble9} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
         </View>

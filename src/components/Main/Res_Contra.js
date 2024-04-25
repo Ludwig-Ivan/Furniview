@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {Surface, TextInput} from 'react-native-paper';
 import {Button} from 'react-native-paper';
-import Background from './Background';
+import Background from '../common/Background';
 
 const Res_Contra = ({navigation}) => {
   const [user, setUser] = useState('');
