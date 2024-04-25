@@ -12,24 +12,44 @@ const Registrarse = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [tel, setTel] = useState('');
   const [vm, setVM] = useState(false);
+  const [title, setTitle] = useState('');
+  const [parag, setParag] = useState('');
 
   function Registrar() {
-    if (user.trim() !== '' && password.trim() !== '') {
-      navigation.navigate('Menu', {user: user, password: password});
+    if (
+      user.trim() !== '' &&
+      password.trim() !== '' &&
+      email.trim() !== '' &&
+      tel.trim() !== ''
+    ) {
+      if (
+        user.length > 8 &&
+        password.length > 8 &&
+        email.length > 8 &&
+        tel.length > 10
+      ) {
+        setUser('');
+        setPassword('');
+        setTel('');
+        setEmail('');
+        navigation.navigate('Menu', {user: user, password: password});
+      } else {
+        setVM(true);
+        setTitle('Minimo de caracteres 8');
+        setParag(
+          'El [usuario, contraseña, email, telefono] no son lo suficientemente largas ',
+        );
+      }
     } else {
       setVM(true);
-      return;
+      setTitle('Campos Vacios');
+      setParag('Por favor llene todos los campos');
     }
   }
   return (
     <Background>
       <View style={{flex: 1, position: 'absolute'}}>
-        <Ventana_Alert
-          vm={vm}
-          setVM={setVM}
-          title={'Campos Vacios'}
-          parag={'Por favor llene los campos para ingresar'}
-        />
+        <Ventana_Alert vm={vm} setVM={setVM} title={title} parag={parag} />
 
         <Button
           buttonColor="#D4B89E"

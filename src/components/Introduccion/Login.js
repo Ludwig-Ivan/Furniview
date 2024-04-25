@@ -10,13 +10,26 @@ const Login = ({navigation}) => {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
   const [vm, setVM] = useState(false);
+  const [title, setTitle] = useState('');
+  const [parag, setParag] = useState('');
 
   function Ingresar() {
     if (user.trim() !== '' && password.trim() !== '') {
-      navigation.navigate('Menu', {user: user, password: password});
+      if (user.length > 8 && password.length > 8) {
+        setUser('');
+        setPassword('');
+        navigation.navigate('Menu', {user: user, password: password});
+      } else {
+        setVM(true);
+        setTitle('Minimo de caracteres 8');
+        setParag(
+          'El usuario o la contraseña no son lo suficientemente largas ',
+        );
+      }
     } else {
       setVM(true);
-      return;
+      setTitle('Campos Vacios');
+      setParag('Por favor llene todos los campos');
     }
   }
 
@@ -27,12 +40,7 @@ const Login = ({navigation}) => {
           flex: 1,
           position: 'absolute',
         }}>
-        <Ventana_Alert
-          vm={vm}
-          setVM={setVM}
-          title={'Campos Vacios'}
-          parag={'Por favor llene los campos para ingresar'}
-        />
+        <Ventana_Alert vm={vm} setVM={setVM} title={title} parag={parag} />
         <Button
           buttonColor="#D4B89E"
           contentStyle={{justifyContent: 'flex-start'}}

@@ -22,18 +22,20 @@ const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: '80%',
-    height: '50%',
+    minHeight: '30%',
     gap: 20,
   },
   title: {
     fontSize: 30,
     fontWeight: '900',
     color: '#000',
+    textAlign: 'center',
   },
   parag: {
     fontSize: 18,
     fontWeight: '600',
     textAlign: 'center',
+    maxWidth: '80%',
   },
 });
 export default Ventana_Alert;

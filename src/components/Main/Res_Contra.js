@@ -4,13 +4,31 @@ import {StyleSheet, Text, View} from 'react-native';
 import {Surface, TextInput} from 'react-native-paper';
 import {Button} from 'react-native-paper';
 import Background from '../common/Background';
+import Ventana_Alert from '../common/Ventana_Alert';
 
 const Res_Contra = ({navigation}) => {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
   const [npassword, setNpassword] = useState('');
   const [code, setCode] = useState('');
+  const [vm, setVM] = useState(false);
+  const [title, setTitle] = useState('');
+  const [parag, setParag] = useState('');
 
+  function Validation() {
+    if ((code !== '', npassword !== '', password !== '', user !== '')) {
+      setCode('');
+      setNpassword('');
+      setPassword('');
+      setUser('');
+      setTitle('Constraseña Restablecida');
+      setParag('!Cierre la ventana!');
+    } else {
+      setTitle('Campos Vacios');
+      setParag('Por favor llene todos los campos');
+    }
+    setVM(true);
+  }
   return (
     <Background>
       <View
@@ -20,6 +38,7 @@ const Res_Contra = ({navigation}) => {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
+        <Ventana_Alert vm={vm} setVM={setVM} title={title} parag={parag} />
         <View style={style.login}>
           <View>
             <Text style={style.title}>RESTABLECER CONTRASEÑA</Text>
@@ -32,6 +51,7 @@ const Res_Contra = ({navigation}) => {
               placeholderTextColor="#FFFD"
               underlineColor="#FFF0"
               value={user}
+              textColor="#fff"
               onChangeText={text => setUser(text)}
               placeholder={'Usuario'}
               activeUnderlineColor="#0000"
@@ -41,6 +61,7 @@ const Res_Contra = ({navigation}) => {
               mode="flat"
               style={style.input}
               value={password}
+              textColor="#fff"
               onChangeText={text => setPassword(text)}
               placeholderTextColor="#FFFD"
               placeholder={'Contraseña Antigua'}
@@ -52,6 +73,7 @@ const Res_Contra = ({navigation}) => {
               mode="flat"
               style={style.input}
               value={npassword}
+              textColor="#fff"
               onChangeText={text => setNpassword(text)}
               placeholderTextColor="#FFFD"
               placeholder={'Contraseña Nueva'}
@@ -63,6 +85,7 @@ const Res_Contra = ({navigation}) => {
               mode="flat"
               style={style.input}
               value={code}
+              textColor="#fff"
               onChangeText={text => setCode(text)}
               placeholderTextColor="#FFFD"
               placeholder={'Codigo'}
@@ -77,9 +100,7 @@ const Res_Contra = ({navigation}) => {
             }}
             elevation={2}>
             <Button
-              onPress={() => {
-                navigation.goBack();
-              }}
+              onPress={Validation}
               buttonColor="#382424"
               style={style.btn}>
               <Text style={style.btn_text}>Restablecer</Text>
