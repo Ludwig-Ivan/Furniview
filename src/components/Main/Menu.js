@@ -26,33 +26,61 @@ const Menu = props => {
             <Card.Cover style={style.card_cover} source={Furnitures.mueble1} />
             <Card.Title titleStyle={style.card_title} title="Comedores" />
           </Card>
-          <Card style={style.card}>
+          <Card
+            onPress={() => {
+              navigation.navigate('MenuProd');
+            }}
+            style={style.card}>
             <Card.Cover style={style.card_cover} source={Furnitures.mueble2} />
-            <Card.Title titleStyle={style.card_title} title="Comedores" />
+            <Card.Title titleStyle={style.card_title} title="Cocinas" />
           </Card>
-          <Card style={style.card}>
+          <Card
+            onPress={() => {
+              navigation.navigate('MenuProd');
+            }}
+            style={style.card}>
             <Card.Cover style={style.card_cover} source={Furnitures.mueble3} />
-            <Card.Title titleStyle={style.card_title} title="Comedores" />
+            <Card.Title titleStyle={style.card_title} title="Recamara" />
           </Card>
-          <Card style={style.card}>
+          <Card
+            onPress={() => {
+              navigation.navigate('MenuProd');
+            }}
+            style={style.card}>
             <Card.Cover style={style.card_cover} source={Furnitures.mueble4} />
-            <Card.Title titleStyle={style.card_title} title="Comedores" />
+            <Card.Title titleStyle={style.card_title} title="Sala" />
           </Card>
-          <Card style={style.card}>
+          <Card
+            onPress={() => {
+              navigation.navigate('MenuProd');
+            }}
+            style={style.card}>
             <Card.Cover style={style.card_cover} source={Furnitures.mueble5} />
-            <Card.Title titleStyle={style.card_title} title="Comedores" />
+            <Card.Title titleStyle={style.card_title} title="Baño" />
           </Card>
-          <Card style={style.card}>
+          <Card
+            onPress={() => {
+              navigation.navigate('MenuProd');
+            }}
+            style={style.card}>
             <Card.Cover style={style.card_cover} source={Furnitures.mueble6} />
-            <Card.Title titleStyle={style.card_title} title="Comedores" />
+            <Card.Title titleStyle={style.card_title} title="Tocadores" />
           </Card>
-          <Card style={style.card}>
+          <Card
+            onPress={() => {
+              navigation.navigate('MenuProd');
+            }}
+            style={style.card}>
             <Card.Cover style={style.card_cover} source={Furnitures.mueble7} />
-            <Card.Title titleStyle={style.card_title} title="Comedores" />
+            <Card.Title titleStyle={style.card_title} title="Alacenas" />
           </Card>
-          <Card style={style.card}>
+          <Card
+            onPress={() => {
+              navigation.navigate('MenuProd');
+            }}
+            style={style.card}>
             <Card.Cover style={style.card_cover} source={Furnitures.mueble9} />
-            <Card.Title titleStyle={style.card_title} title="Comedores" />
+            <Card.Title titleStyle={style.card_title} title="Escritorio" />
           </Card>
         </View>
       </ScrollView>

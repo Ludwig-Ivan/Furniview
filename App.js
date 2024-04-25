@@ -58,16 +58,12 @@ const App = () => {
     <PaperProvider>
       <View style={{flex: 1}}>
         <NavigationContainer>
-          <Stack.Navigator
-            initialRouteName="Welcome"
-            screenOptions={{
-              transitionSpec: {
-                open: {animation: 'timing', config: {duration: 5}},
-                close: {animation: 'timing', config: {duration: 0}},
-              },
-            }}>
+          <Stack.Navigator initialRouteName="Welcome">
             <Stack.Screen
-              options={{title: 'Main', headerShown: false}}
+              options={{
+                title: 'Main',
+                headerShown: false,
+              }}
               name="Home"
               component={Main_Screen}
             />

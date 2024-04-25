@@ -4,9 +4,11 @@ import {View, Text, Image, StyleSheet, Pressable} from 'react-native';
 import Header from '../Header/Header';
 import {Button, DataTable} from 'react-native-paper';
 import Image_Prod from './ImageProd';
+import Ventana_Alert from '../common/Ventana_Alert';
 
 const Producto = ({navigation, img}) => {
   const [vm, setVM] = useState(false);
+  const [va, setVA] = useState(false);
   return (
     <View style={{flex: 1, backgroundColor: 'rgba(56,36,36,0.65)'}}>
       <Header
@@ -14,6 +16,12 @@ const Producto = ({navigation, img}) => {
         navigation={navigation}
       />
       <Image_Prod vm={vm} setVM={setVM} img={img} />
+      <Ventana_Alert
+        vm={va}
+        setVM={setVA}
+        title={'Reservacion Exitosa'}
+        parag={'El mueble se reservo con exito'}
+      />
       <View style={style.contenedor}>
         <Pressable onPress={() => setVM(true)}>
           <Image style={style.img} source={img} />
@@ -60,7 +68,7 @@ const Producto = ({navigation, img}) => {
           </DataTable>
 
           <Button
-            onLongPress={() => console.log('Reservado')}
+            onPress={() => setVA(true)}
             buttonColor="#382424"
             style={style.btn}>
             <Text style={style.btn_text}>Reservar</Text>
