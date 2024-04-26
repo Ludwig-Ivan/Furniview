@@ -5,6 +5,8 @@ import {Surface, TextInput} from 'react-native-paper';
 import {Button} from 'react-native-paper';
 import Background from '../common/Background';
 import Ventana_Alert from '../common/Ventana_Alert';
+import {Functions} from '../../constants';
+const {Vacio, Long} = Functions;
 
 const Login = ({navigation}) => {
   const [user, setUser] = useState('');
@@ -14,8 +16,8 @@ const Login = ({navigation}) => {
   const [parag, setParag] = useState('');
 
   function Ingresar() {
-    if (user.trim() !== '' && password.trim() !== '') {
-      if (user.length > 8 && password.length > 8) {
+    if (!Vacio(user) && !Vacio(password)) {
+      if (Long(user, 8) && Long(password, 6)) {
         setUser('');
         setPassword('');
         navigation.navigate('Menu', {user: user, password: password});

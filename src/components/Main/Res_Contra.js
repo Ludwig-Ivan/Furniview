@@ -5,6 +5,8 @@ import {Surface, TextInput} from 'react-native-paper';
 import {Button} from 'react-native-paper';
 import Background from '../common/Background';
 import Ventana_Alert from '../common/Ventana_Alert';
+import {Functions} from '../../constants';
+const {Vacio, Long} = Functions;
 
 const Res_Contra = ({navigation}) => {
   const [user, setUser] = useState('');
@@ -16,13 +18,22 @@ const Res_Contra = ({navigation}) => {
   const [parag, setParag] = useState('');
 
   function Validation() {
-    if ((code !== '', npassword !== '', password !== '', user !== '')) {
-      setCode('');
-      setNpassword('');
-      setPassword('');
-      setUser('');
-      setTitle('Constraseña Restablecida');
-      setParag('!Cierre la ventana!');
+    if (!Vacio(code) && !Vacio(npassword) && !Vacio(password) && !Vacio(user)) {
+      if (
+        Long(code, 6) &&
+        Long(npassword, 8) &&
+        Long(password, 8) &&
+        Long(user, 8)
+      ) {
+        setCode('');
+        setNpassword('');
+        setPassword('');
+        setUser('');
+        setTitle('Constraseña Restablecida');
+        setParag('!Cierre la ventana!');
+      } else {
+        setTitle('Cantidad de digitos insuficientes');
+      }
     } else {
       setTitle('Campos Vacios');
       setParag('Por favor llene todos los campos');

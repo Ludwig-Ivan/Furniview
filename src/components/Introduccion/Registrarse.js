@@ -5,6 +5,9 @@ import {Surface, TextInput} from 'react-native-paper';
 import {Button} from 'react-native-paper';
 import Background from '../common/Background';
 import Ventana_Alert from '../common/Ventana_Alert';
+import {Functions} from '../../constants';
+
+const {Vacio, Long} = Functions;
 
 const Registrarse = ({navigation}) => {
   const [user, setUser] = useState('');
@@ -16,17 +19,12 @@ const Registrarse = ({navigation}) => {
   const [parag, setParag] = useState('');
 
   function Registrar() {
-    if (
-      user.trim() !== '' &&
-      password.trim() !== '' &&
-      email.trim() !== '' &&
-      tel.trim() !== ''
-    ) {
+    if (!Vacio(user) && !Vacio(password) && !Vacio(email) && !Vacio(tel)) {
       if (
-        user.length > 8 &&
-        password.length > 8 &&
-        email.length > 8 &&
-        tel.length > 10
+        Long(user, 8) &&
+        Long(password, 8) &&
+        Long(email, 8) &&
+        Long(tel, 10)
       ) {
         setUser('');
         setPassword('');
