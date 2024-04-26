@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {StyleSheet, View} from 'react-native';
-import {IconButton} from 'react-native-paper';
+import {StyleSheet} from 'react-native';
+import {IconButton, Surface} from 'react-native-paper';
 import Buscar from './Buscar';
 import Filter from './Filter';
 import {Icons} from '../../constants';
@@ -9,7 +9,7 @@ const Header = ({navigation_op, navigation}) => {
   const [bus, setBus] = useState(false);
   const [filt, setFilt] = useState(false);
   return (
-    <View style={style.head}>
+    <Surface elevation={4} style={style.head}>
       <Buscar bus={bus} setBus={setBus} />
       <Filter filt={filt} setFilt={setFilt} />
       <IconButton size={40} onPress={navigation_op} icon={Icons.back} />
@@ -34,7 +34,7 @@ const Header = ({navigation_op, navigation}) => {
         }}
         icon={Icons.user}
       />
-    </View>
+    </Surface>
   );
 };
 

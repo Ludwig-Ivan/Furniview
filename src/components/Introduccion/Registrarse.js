@@ -55,7 +55,7 @@ const Registrarse = ({navigation}) => {
           buttonColor="#D4B89E"
           contentStyle={{justifyContent: 'flex-end'}}
           style={style.btn_top}
-          mode="contained"
+          mode="elevated"
           onPress={() => {
             navigation.goBack();
           }}>
@@ -124,7 +124,11 @@ const Registrarse = ({navigation}) => {
             </View>
           </ScrollView>
 
-          <Button onPress={Registrar} buttonColor="#382424" style={style.btn}>
+          <Button
+            mode="elevated"
+            onPress={Registrar}
+            buttonColor="#382424"
+            style={style.btn}>
             <Text style={style.btn_text}>Registrarse</Text>
           </Button>
         </Surface>

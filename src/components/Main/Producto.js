@@ -68,6 +68,7 @@ const Producto = ({navigation, img}) => {
           </DataTable>
 
           <Button
+            mode="elevated"
             onPress={() => setVA(true)}
             buttonColor="#382424"
             style={style.btn}>

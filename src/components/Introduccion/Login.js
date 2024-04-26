@@ -45,7 +45,7 @@ const Login = ({navigation}) => {
           buttonColor="#D4B89E"
           contentStyle={{justifyContent: 'flex-start'}}
           style={style.btn_top}
-          mode="contained"
+          mode="elevated"
           onPress={() => {
             navigation.goBack();
           }}>
@@ -90,7 +90,11 @@ const Login = ({navigation}) => {
             style={{alignSelf: 'flex-start'}}>
             <Text style={style.record}>Recordar Contraseña</Text>
           </Button>
-          <Button onPress={Ingresar} buttonColor="#382424" style={style.btn}>
+          <Button
+            onPress={Ingresar}
+            mode="elevated"
+            buttonColor="#382424"
+            style={style.btn}>
             <Text style={style.btn_text}>Ingresar</Text>
           </Button>
         </Surface>

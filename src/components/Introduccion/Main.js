@@ -16,6 +16,7 @@ const Main = ({navigation}) => {
           </View>
           <View style={{gap: 20}}>
             <Button
+              mode="elevated"
               onPress={() => navigation.navigate('Login')}
               buttonColor="#382424"
               style={style.btn}>
@@ -25,6 +26,7 @@ const Main = ({navigation}) => {
               onPress={() => {
                 navigation.navigate('Registrarse');
               }}
+              mode="elevated"
               buttonColor="#382424"
               style={style.btn}>
               <Text style={style.btn_text}>Registrarse</Text>
